@@ -1,0 +1,58 @@
+// /*------------------------------------------
+// Color Variables
+// ------------------------------------------*/
+//
+// /*------------------------------------------
+// Component Specific Global Variables
+// ------------------------------------------*/
+//
+// /* Buttons
+// ------------*/
+// $btnRadius: 6px;
+//
+// /* Button Large
+// -----------------*/
+// $btn_L_Padding: 0 10px 0 10px;
+// $btn_L_font_Size: 15px;
+// $btn_L_Height: 44px;
+// $btn_L_Width: 150px;
+//
+// /* Header
+// ------------*/
+// $header_cell_height: 78px;
+// $header_border_color: $mercury;
+// $header_bg_color: $white;
+// $header_badge_color: $red;
+//
+// /* Docket
+// -----------*/
+// $docket_Header_BG: $white;
+// $docket_Header_Title_Color: $regalBlue;
+// $docket_Header_Title_Font: 20px;
+// $docket_Footer_BG: $wildSand;
+//
+// /* Tabs
+// -----------*/
+// $tab_Height: 65.5px;
+// $tab_Padding: 0 10px;
+// $tb_BG: $white;
+// $tab_Text_Color: $mineShaft;
+// $tab_Text_Size: 17px;
+// $tab_bar_Color: $fuelYellow;
+//
+// /* Table
+// -----------*/
+// $datalistValue_color: $mineShaftDark;
+// $datalistLabel_color: $mineShaftDark;
+// $datalistValue_Text_Size: 15px;
+// $datalistLabel_Text_Size: 12px;
+//
+// /* Data List
+// -----------*/
+// $theadText: rgba(51, 51, 51, 0.5);
+// $tbodyText: $mineShaft;
+//
+// Extends
+// ------------------------------------------*/
+// @import "globalExtends.scss";
+// @import "buttonExtends.scss";

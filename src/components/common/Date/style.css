@@ -1,0 +1,25 @@
+.date-column {
+  width: 35px;
+}
+
+.date-row {
+  display: flex;
+}
+
+.selected-date-cell {
+  background-color: red;
+}
+
+.popup-container {
+  position: fixed;;
+  width: 350px;
+  border: 1px solid black;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

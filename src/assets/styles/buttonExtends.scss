@@ -1,0 +1,55 @@
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  @extend .flex-all-center;
+  display: flex;
+  margin: 0;
+  height: auto;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  color: inherit;
+  background-color: transparent;
+  border-radius: $btnRadius;
+  font-family: 'proxima_nova_rgbold';
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btnGreen {
+  color: $white;
+  background: $turquoise;
+  border: 1.5px solid $turquoise;
+}
+
+.btnWhite {
+  color: $turquoise;
+  background: $white;
+  border: 1.5px solid $turquoise;
+}
+
+.btnLarge {
+  padding: $btn_L_Padding;
+  @include font-size($btn_L_font_Size);
+  height: $btn_L_Height;
+  min-width: $btn_L_Width;
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.btn-action {
+  padding: 16px 0 0;
+
+  .btn {
+    margin-right: 8px;
+  }
+}

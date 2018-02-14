@@ -1,0 +1,55 @@
+
+:root {
+  /* colors */
+  --highlight-color: #735399;
+  --field-box-shadow: 2px 2px 2px #d6d6d6;
+  --secondary-highlight-color: rgb(229, 242, 250);
+  --border-color: rgb(240, 240, 240);
+  --greyish-color: rgb(246, 246, 246);
+  --border-light: #e2e2e2;
+  --border-light-alt: #e8e8e8;
+  --white-color: #fff;
+  --darker-color: #343841;
+  --darker-color-alt: #333;
+  --black-color: #000;
+  --red-color: #f00;
+  --grey-alt: #868686;
+  --table-row: #fafafa;
+  --darker-gery: #999;
+  --inputbox-shadow: rgba(0, 0, 0, 0.1) 0 6px 5px -3px;
+  --icon-color: #b2b2b2;
+
+  /* font size */
+  --font-size12: 12px;
+  --font-size13: 13px;
+  --font-size14: 14px;
+  --font-size15: 15px;
+  --font-size16: 16px;
+  --font-size17: 17px;
+  --font-size18: 18px;
+  --font-size20: 20px;
+  --font-size22: 22px;
+  --font-size24: 24px;
+  --font-size25: 25px;
+  --font-size27: 27px;
+  --font-size30: 30px;
+
+  /* fonts */
+  --proxima-nova-regular: 'proxima_nova_rgregular';
+  --proxima-nova-bold: 'proxima_nova_rgbold';
+
+  /* border radius */
+  --radius3: 3px;
+
+  /* Viewports */
+  @custom-media --breakpoint-lg (max-width: 1330px);
+  @custom-media --breakpoint-md (max-width: 1180px);
+}
+
+$regalBlue: #03446A;
+$sunShade: #FFA432;
+$white: #FFFFFF;
+$steelBlue: #4B8CB2;
+$chathamsBlue: #0E5073;
+$stTropaz: #246085;
+

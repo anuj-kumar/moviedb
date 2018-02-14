@@ -1,0 +1,61 @@
+
+@import '../../../assets/styles/variable.css';
+
+.container {
+  align-items: center;
+  animation: fadeIn 0.2s ease-in-out;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.container.no-anim {
+  animation: none;
+}
+
+.backdrop {
+  background-color: rgba(1, 1, 1, 0.4);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.body-container,
+.content {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 1px 1px 4px #777575;
+  padding: 10px;
+  z-index: 10;
+}
+
+.content {
+  padding: 20px 24px;
+  position: relative;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.wrapper {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
