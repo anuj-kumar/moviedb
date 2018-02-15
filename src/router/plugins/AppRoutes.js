@@ -11,22 +11,12 @@ export const AppRoutes = props => (
   <Switch>
     <Route
       exact
-      path="/date"
-      component={DateSelector}
-    />
-    <Route
-      exact
-      path="/login"
-      component={Login}
-    />
-    <Route
-      exact
-      path="/time"
-      component={TimeSelector}
+      path="/view"
+      component={view}
     />
     <Route
       path="*"
-      component={PageNotFound}
+      component={list}
     />
   </Switch>
 )
