@@ -10,7 +10,7 @@
     "lint": "eslint src",
     "stylelint": "stylelint '**/*.scss'"
   },
-  "author": "Ritesh Bansal",
+  "author": "Anuj Kumar",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-eslint": "^8.0.1",

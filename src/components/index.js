@@ -1,1 +1,1 @@
-export list from './list'
+export * from './list'

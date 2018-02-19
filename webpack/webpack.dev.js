@@ -25,6 +25,7 @@ module.exports = {
     historyApiFallback: true,
     host: '0.0.0.0',
     disableHostCheck: true,
+    hot: true
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -48,12 +49,12 @@ module.exports = {
       exclude: /node_modules/,
       use: [
         'babel-loader',
-        {
-          loader: 'eslint-loader',
-          options: {
-            quiet: true,
-          },
-        },
+        // {
+        //   loader: 'eslint-loader',
+        //   options: {
+        //     quiet: true,
+        //   },
+        // },
       ],
     },
     {

@@ -1,2 +1,2 @@
 
-export TodosModel from './TodosModel'
+export MovieModel from './movieModel'
