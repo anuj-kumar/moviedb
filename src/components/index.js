@@ -1,2 +1,1 @@
-export * from './common'
-export Login from './Login'
+export list from './list'
