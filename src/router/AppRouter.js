@@ -1,20 +1,16 @@
 import React from 'react'
-import { Switch } from 'react-router-dom'
-
-import { Authenticated } from './'
-import { USER_ADMIN } from './constants'
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import { AppRoutes, APP_ROUTE_NAME } from './plugins'
+import { List, View, PageNotFound } from '../components'
+import { MovieDetailsCotainer } from '../containers'
 
 const AppRouter = props => (
   <div>
-    <Switch>
-      <Authenticated
-        path="/"
-        name={APP_ROUTE_NAME}
-        componentRef={AppRoutes}
-        authorize={[USER_ADMIN]}
-      />
-    </Switch>
+      <Switch>
+        <Route exact path="/" name={APP_ROUTE_NAME} component={List}/>
+        <Route exact path="/view/:id" name={APP_ROUTE_NAME} component={View}/>
+        <Route path="*" name={404} component={PageNotFound}/>
+      </Switch>
   </div>
 )
 

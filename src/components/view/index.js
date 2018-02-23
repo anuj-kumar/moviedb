@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class view extends React.Component {
+export default class View extends React.Component {
   state = {
     value: '',
   }

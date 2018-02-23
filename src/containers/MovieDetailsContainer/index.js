@@ -13,11 +13,14 @@ export class MovieDetailsContainer extends Component {
   }
 
   render() {
-    const { movieModel } = this.props
+    const { MovieModel } = this.props
     return (
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      // <BrowserRouter>
+      //   <AppRouter />
+      // </BrowserRouter>
+      <div>
+        <p>Movie Container</p>
+      </div>
     )
   }
 }

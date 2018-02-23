@@ -1,2 +1,2 @@
 export PageNotFound from './PageNotFound'
-export ListComponent from './List'
+export List from './List'

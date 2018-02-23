@@ -1,2 +1,2 @@
 
-export MovieModel from './movieModel'
+export MovieModel from './MovieModel'

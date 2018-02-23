@@ -5,11 +5,8 @@ import { EMPTY_STRING } from '../../constants'
 
 export default class ApplicationModel {
   @observable application = {
-    loader: false,
-    token: EMPTY_STRING,
-    id: EMPTY_STRING,
+    loader: false
   }
-  @observable permissions = calculateApplicationPermissions({})
 
   @action
   showLoader() {
@@ -17,17 +14,7 @@ export default class ApplicationModel {
   }
 
   @action
-  setToken(token) {
-    this.application.token = token
-  }
-
-  @action
-  setPermissions(permissions) {
-    this.permissions = calculateApplicationPermissions(permissions)
-  }
-
-  @action
-  setId(id) {
-    this.application.id = id
+  stopLoader() {
+    this.application.loader = false
   }
 }
