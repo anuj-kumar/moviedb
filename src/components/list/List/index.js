@@ -1,24 +1,36 @@
 import React, { Component } from 'react'
-import { movieModel } from '../../../models'
 import { CacheService, getMovies } from '../../../services'
 import { inject, observer } from 'mobx-react'
+import ReactTable from "react-table";
+import "react-table/react-table.css";
 
-@inject('movieModel')
+@inject('movieListModel')
 @observer
 export default class List extends Component {
-  ComponentWillMount(){
-    const data = getMovies();
-    console.log(data);
+  componentWillMount(){
+    const { movieListModel } = this.props
+    movieListModel.fetchMovies()
   }
   render() {
-    // setItem('a', 1)
-    console.log(this.state)
+    const { movieListModel : { movies } } = this.props
+    let movieList = movies.toJS()
     return (
-      <div className="movie-list">
-        <h1>Movies</h1>
-        <ul>
-          <li>Hi</li>
-        </ul>
+      <div>
+        <ReactTable
+          data={movieList}
+          columns={[
+              {
+                Header: "Title",
+                accessor: "title"
+              },
+              {
+                Header: "Released",
+                accessor: "year"
+              }
+          ]}
+          defaultPageSize={10}
+          className="-striped -highlight"
+        />
       </div>
     )
   }

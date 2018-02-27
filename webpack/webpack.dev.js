@@ -27,6 +27,7 @@ module.exports = {
     disableHostCheck: true,
     hot: true
   },
+  devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {

@@ -1,8 +1,22 @@
-import { observable } from 'mobx'
+import { action, observable, toJS } from 'mobx'
+import { getMovieDetails } from '../services'
 
-export default class MovieModel {
+export default class MovieListModel {
 
-	setModel(){}
+	@observable movie = {}
 
-	getModel(){}
+	@action
+	async fetchMovie(ID) {
+		const response = await getMovieDetails(ID)
+		this.setMovie(response)
+	}
+	@action
+	setMovie(response) {
+		this.movie = response
+	}
+	@action
+	getMovie() {
+		return toJS(this.movie)
+	}
+
 }
