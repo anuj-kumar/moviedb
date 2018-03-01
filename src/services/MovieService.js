@@ -3,8 +3,8 @@ import { api } from '../utils'
 
 const API_URL = 'http://139.59.19.220:8000'
 
-export const getMovieDetails = async ({ ID }) => {
-  const url = API_URL + '/movies/' + ID
+export async function getMovieDetails(ID) {
+  const url = API_URL + '/movies/' + ID + '/'
   try {
     return await api(url)
   }
