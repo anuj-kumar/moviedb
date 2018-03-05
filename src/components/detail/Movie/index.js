@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { CacheService, getMovieDetails } from '../../../services'
 import { inject, observer } from 'mobx-react'
+import { toJS } from 'mobx'
 
 @inject('movieModel')
 @observer
@@ -9,16 +10,14 @@ export default class Detail extends Component {
     const { movieModel, match : { params } } = this.props
     movieModel.fetchMovie(params.id)
   }
-  renderItem(index, key) {
-    return <div key={key.toString()}>{key}</div>;
-  }
   render() {
     const { movieModel : { movie } } = this.props
-    let movieDetail = {title: 'Hi'}
+    let movieDetail = toJS(movie)
     return (
       <div>
-        <h1>{movieDetail.title}</h1>
-        <h2>yay</h2>
+        <h1>{movieDetail.title}</h1> <h3>{ movieDetail.year }</h3>
+        <p>Rating: {movieDetail.rating} / 10 </p>
+        <p>{movieDetail.genre}</p>
       </div>
     )
   }
