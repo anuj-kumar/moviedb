@@ -3,12 +3,14 @@ import { CacheService, getMovieDetails } from '../../../services'
 import { inject, observer } from 'mobx-react'
 import { toJS } from 'mobx'
 
-@inject('movieModel')
+@inject('movieModel', 'applicationModel')
 @observer
 export default class Detail extends Component {
   componentWillMount(){
-    const { movieModel, match : { params } } = this.props
+    const { applicationModel, movieModel, match : { params } } = this.props
+    applicationModel.showLoader()
     movieModel.fetchMovie(params.id)
+    applicationModel.hideLoader()
   }
   render() {
     const { movieModel : { movie } } = this.props

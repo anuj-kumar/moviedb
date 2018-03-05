@@ -14,7 +14,7 @@ export default class ApplicationModel {
   }
 
   @action
-  stopLoader() {
+  hideLoader() {
     this.application.loader = false
   }
 }

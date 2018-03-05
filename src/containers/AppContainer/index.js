@@ -16,7 +16,7 @@ export class AppContainer extends Component {
     const { applicationModel } = this.props
     if (applicationModel.application && applicationModel.application.loader) {
       return (
-        <LoaderComponent />
+        <p>Loading ...</p>
       )
     }
     return (
