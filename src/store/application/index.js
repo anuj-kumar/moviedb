@@ -1,5 +1,4 @@
-import ApplicationModel from './ApplicationModel'
-import { MovieModel, MovieListModel } from '../../models/'
+import { ApplicationModel, MovieModel, MovieListModel } from '../../models/'
 
 export const applicationStores = {
   applicationModel: new ApplicationModel(),

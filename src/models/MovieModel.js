@@ -1,17 +1,27 @@
 import { action, observable, toJS } from 'mobx'
+import { stores } from '../store'
+import { ApplicationModel } from '../models'
 import { getMovieDetails } from '../services'
-import { ApplicationModel } from '../store'
 
-export default class MovieModel extends ApplicationModel {
+export default class MovieModel {
 
 	@observable movie = {}
+	appModel = {}
+	constructor() {
+		this.appModel = new ApplicationModel()
+		this.init()
+	}
+	@action
+	init() {
+		this.movie = {}
+	}
 
 	@action
-	async fetchMovie(ID) {
-        this.showLoader()
+	async fetchMovie(appModel, ID) {
+	    appModel.showLoader()
 		const response = await getMovieDetails(ID)
 		this.setMovie(response)
-        this.hideLoader()
+	    appModel.hideLoader()
 	}
 	@action
 	setMovie(response) {

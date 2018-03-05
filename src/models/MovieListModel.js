@@ -6,9 +6,11 @@ export default class MovieListModel {
 	@observable movies = []
 
 	@action
-	async fetchMovies() {
+	async fetchMovies(appModel) {
+	    appModel.showLoader()
 		const response = await getMovies()
 		this.setMovies(response)
+		appModel.hideLoader()
 	}
 	@action
 	setMovies(response) {

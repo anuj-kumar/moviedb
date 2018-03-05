@@ -2,13 +2,14 @@ import React, { Component } from 'react'
 import { CacheService, getMovies } from '../../../services'
 import { inject, observer } from 'mobx-react'
 import { withRouter } from 'react-router-dom'
+import { Loader } from '../../loader'
 
-@inject('movieListModel')
+@inject('movieListModel', 'applicationModel')
 @observer
 class List extends Component {
   componentWillMount(){
-    const { movieListModel } = this.props
-    movieListModel.fetchMovies()
+    const { movieListModel, applicationModel } = this.props
+    movieListModel.fetchMovies(applicationModel)    
   }
   handleClick(id) {
       this.props.history.push('/view/' + id)
@@ -18,7 +19,10 @@ class List extends Component {
     return <div key={key.toString()}>{key}</div>;
   }
   render() {
-    const { movieListModel : { movies }, history } = this.props
+    const { applicationModel, movieListModel : { movies }, history } = this.props
+    if (applicationModel.application.loader) {
+      return <Loader/>
+    }
     let movieList = movies.toJS()
     return (
       <div>
