@@ -1,7 +1,0 @@
-export PageNotFound from './PageNotFound'
-export TabsComponent from './Tabs'
-export Popup from './Popup'
-export DateSelector from './Date'
-export OptionSelector from './OptionSelector'
-export Slider from './Slider'
-export TimeSelector from './TimeSelector'

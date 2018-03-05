@@ -1,6 +1,5 @@
 export * from './api'
 export * from './config-mapper.js'
-export * from './date-utils'
 export * from './functions'
 export * from './form'
 export * from './reactabular-utils'

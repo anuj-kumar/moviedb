@@ -10,7 +10,7 @@
     "lint": "eslint src",
     "stylelint": "stylelint '**/*.scss'"
   },
-  "author": "Ritesh Bansal",
+  "author": "Anuj Kumar",
   "devDependencies": {
     "babel-core": "^6.9.1",
     "babel-eslint": "^8.0.1",
@@ -38,6 +38,7 @@
     "postcss-modules": "^0.8.0",
     "postcss-sassy-mixins": "^2.1.0",
     "react-hot-loader": "^1.3.1",
+    "react-table": "^6.8.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "stylelint": "^8.2.0",

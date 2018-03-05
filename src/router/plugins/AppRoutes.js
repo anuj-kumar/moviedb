@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Route, Switch } from 'react-router-dom'
 
-import { PageNotFound, DateSelector, TimeSelector, Login } from '../../components'
+import { ListComponent } from '../../components'
+import { MovieDetailsContainer } from '../../containers'
 
 export const APP_ROUTE = '/'
 export const APP_ROUTE_NAME = 'Home'
@@ -10,23 +11,12 @@ export const APP_ROUTE_NAME = 'Home'
 export const AppRoutes = props => (
   <Switch>
     <Route
-      exact
-      path="/date"
-      component={DateSelector}
+      path="/list"
+      component={ListComponent}
     />
     <Route
-      exact
-      path="/login"
-      component={Login}
-    />
-    <Route
-      exact
-      path="/time"
-      component={TimeSelector}
-    />
-    <Route
-      path="*"
-      component={PageNotFound}
+      path={'${match.url}/:id'}
+      component={MovieDetailsContainer}
     />
   </Switch>
 )

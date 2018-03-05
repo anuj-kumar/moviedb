@@ -1,7 +1,7 @@
-import ApplicationModel from './ApplicationModel'
-import { TodosModel } from '../../models/'
+import { ApplicationModel, MovieModel, MovieListModel } from '../../models/'
 
 export const applicationStores = {
   applicationModel: new ApplicationModel(),
-  todosModel: new TodosModel(),
+  movieModel: new MovieModel(),
+  movieListModel: new MovieListModel(),
 }
